@@ -41,14 +41,15 @@
 
 ### Prerequisites
 
-Make sure you have Node.js and npm installed.
+Make sure you have **Node.js** and **npm** installed.
 
 ### Installation
 
 Clone the repository and navigate into the project:
 
 ```bash
-cd college-xp
+git clone https://github.com/ST10455321/collegexp_website.git
+cd collegexp_website
 ```
 
 Install the dependencies:
@@ -108,8 +109,12 @@ The application has been tested locally and successfully produces a production b
 
 ## Deployment
 
-The deployed application link will be added here once deployment is completed.
+The application is deployed and available at:
+
+https://collegexp-website.vercel.app/
 
 ## Repository
 
-The GitHub repository contains the source code and project documentation for College XP.
+The source code and project documentation are available on GitHub:
+
+https://github.com/ST10455321/collegexp_website
