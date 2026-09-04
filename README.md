@@ -1,2 +1,122 @@
 # collegexp_website
 College XP, A campus events and student engagement platform.
+# College XP
+
+**College XP** is a student-focused campus platform designed to help students discover and engage with events, activities, and experiences happening around their college community.
+
+## Features
+
+* Student registration and login
+* Student profiles
+* Discover campus events
+* Event details
+* Event RSVP
+* Ticket purchasing and cart
+* QR ticket functionality
+* QR ticket scanning
+* Student reels
+* Likes and engagement
+* Notifications
+* Rewards
+* Organiser authentication
+* Organiser dashboard
+* Event management
+* My Events
+* Password reset
+
+## Technologies
+
+* React
+* TypeScript
+* Vite
+* TanStack Router
+* TanStack Start
+* Supabase
+* Drizzle ORM
+* Tailwind CSS
+* Radix UI
+* React Hook Form
+* Zod
+* QR Code / QR Scanner
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have **Node.js** and **npm** installed.
+
+### Installation
+
+Clone the repository and navigate into the project:
+
+```bash
+git clone https://github.com/ST10455321/collegexp_website.git
+cd collegexp_website
+```
+
+Install the dependencies:
+
+```bash
+npm install
+```
+
+### Environment Variables
+
+Create a `.env` file in the root directory and add the required Supabase environment variables.
+
+**Do not commit the `.env` file to GitHub.**
+
+### Run the Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at the local development URL provided by Vite.
+
+### Production Build
+
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```text
+college-xp/
+├── drizzle/
+├── public/
+├── src/
+│   ├── components/
+│   ├── hooks/
+│   ├── integrations/
+│   ├── lib/
+│   └── routes/
+├── supabase/
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+## Team
+
+College XP was developed as a collaborative student project.
+
+## Project Status
+
+The application has been tested locally and successfully produces a production build.
+
+## Deployment
+
+The application is deployed and available at:
+
+https://collegexp-website.vercel.app/
+
+## Repository
+
+The source code and project documentation are available on GitHub:
+
+https://github.com/ST10455321/collegexp_website
