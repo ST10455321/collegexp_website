@@ -1,0 +1,23 @@
+
+name: CollegeXP CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check repository files
+        run: |
+          echo "CollegeXP repository checked successfully."
+          test -f README.md || echo "README.md not found."
+          find . -maxdepth 2 -type f | head -50
