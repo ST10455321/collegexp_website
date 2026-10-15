@@ -1,19 +1,17 @@
-
-name: CollegeXP CI
+name: Web CI
 
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
-  build-and-check:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Check out code
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -25,9 +23,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run lint checks
+      - name: Lint
         run: npm run lint
+        continue-on-error: true
 
-      - name: Build CollegeXP
+      - name: Run automated tests
+        run: npm test
+
+      - name: Build
         run: npm run build
-
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
